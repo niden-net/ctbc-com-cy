@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% assign num_words = page.content | strip_html | number_of_words %}
+{% assign minutes   = num_words    | divided_by: 200 %}
+{% assign minutes   = num_words    | divided_by: 200.0 %}
+{% assign minutes_f = num_words    | divided_by: 200.0 %}
+{% assign minutes_i = num_words    | divided_by: 200 %}
+{% assign diff      = minutes_f    | minus: minutes_i %}
+{% if diff >= 0.5 %}
+{% assign minutes = minutes_i | plus: 1 %}
+{% else %}
+{% assign minutes = minutes_i %}
+{% endif %}
+
+{% if minutes <= 1 %}
+{% assign reading_time = '1' | append: ' minute' %}
+{% else %}
+{% assign reading_time = minutes | append: ' minutes' %}
+{% endif %}
+                <article class="card mb-4">
+                    <header class="card-header text-center">
+                        <a href="{{ post.url }}">
+                            <h4 class="card-title">
+                                {{ page.title | strip }}
+                            </h4>
+                        </a>
+                        <div class="card-meta">
+                            {{ page.date | date: '%Y-%m-%d' | strip }} - ({{ reading_time }})
+                        </div>
+                    </header>
+                    <a href="{{ page.url }}">
+                        <img class="card-img"
+                             src="{{ page.image }}"
+                             alt="{{ page.title }}" />
+                    </a>
+                    <div class="card-body">
+                        {{ page.content }}
+                    </div>
+                    <div class="card-footer">
+                    {% for tag in page.tags %}
+                        <button type="button" class="btn btn-outline-primary btn-sm">{{ tag }}</button>
+                    {% endfor %}
+                    </div>
+                </article><!-- /.card -->

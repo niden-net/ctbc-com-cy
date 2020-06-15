@@ -1,0 +1,112 @@
+<div class="head-wrapper">
+    <div class="pe-menu-sticky">
+
+        <div class="pe-container">
+            <header class="row-fluid">
+                <div class="span12">
+
+                    <a class="logo"
+                       href="/{{ page.language }}/"
+                       title="{{ site.data.settings[page.language].home }}">
+                        <img src="/assets/img/CTBClogo1.png"
+                             alt="{{ site.data.settings[page.language].name }}">
+                    </a>
+
+                    <div class="pe-wpml-lang-selector">
+                        <div class="lang_sel_list_horizontal wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-horizontal"
+                             id="lang_sel_list">
+                            <ul>
+                                <li class="icl-en wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-horizontal">
+                                    <a href="/en/"
+                                       class="lang_sel_sel">
+                                        <img class="wpml-ls-flag iclflag"
+                                             src="/assets/img/flags/en.png"
+                                             alt="en"
+                                             title="{{ site.data.settings['en'].language }}">
+                                        <span class="wpml-ls-native icl_lang_sel_native">
+                                            {{ site.data.settings["en"].language }}
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="icl-ru wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+                                    <a href="/ru/"
+                                       class="lang_sel_other">
+                                        <img class="wpml-ls-flag iclflag"
+                                             src="/assets/img/flags/ru.png"
+                                             alt="ru"
+                                             title="{{ site.data.settings['ru'].language }}">
+                                        <span class="wpml-ls-native icl_lang_sel_native">
+                                            {{ site.data.settings["ru"].language }}
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <nav class="pe-menu-main">
+                        <ul id="navigation"
+                            class="pe-menu">
+                            <li id="menu-item-1495"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home {% if page.menu_url == '/' %} current-menu-item page_item current_page_item active{% endif %}">
+                                <a href="/{{ page.language }}">
+                                    {{ site.data.settings[page.language].menu_home }}
+                                </a>
+                            </li>
+                            <li id="menu-item-1493"
+                                class="menu-item menu-item-type-post_type menu-item-object-page{% if page.menu_url == '/about' %} current-menu-item page_item current_page_item active{% endif %}">
+                                <a href="/{{ page.language }}/about">
+                                    {{ site.data.settings[page.language].menu_about }}
+                                </a>
+                            </li>
+                            <li id="menu-item-1489"
+                                class="menu-item menu-item-type-post_type menu-item-object-page{% if page.menu_url == '/services' %} current-menu-item page_item current_page_item active{% endif %}">
+                                <a href="/{{ page.language }}/services">
+                                    {{ site.data.settings[page.language].menu_services }}
+                                </a>
+                            </li>
+                            <li id="menu-item-1487"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown{% if page.menu_url == '/visual-tour' %} current-menu-item page_item current_page_item active{% endif %}">
+                                <a href="/{{ page.language }}/visual-tour">
+                                    {{ site.data.settings[page.language].menu_visual_tour }} <b class="icon-down-open-mini"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li id="menu-item-1883"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page">
+                                        <a href="/{{ page.language }}/360">
+                                            {{ site.data.settings[page.language].menu_360 }}
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-1505"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom">
+                                        <a href="/{{ page.language }}/visual-tour#photo-gallery">
+                                            {{ site.data.settings[page.language].menu_photo_gallery }}
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-1507"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom">
+                                        <a href="/{{ page.language }}/visual-tour#floor-plans">
+                                            {{ site.data.settings[page.language].menu_floor_plans }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-1491"
+                                class="menu-item menu-item-type-post_type menu-item-object-page{% if page.menu_url == '/location' %} current-menu-item page_item current_page_item active{% endif %}">
+                                <a href="/{{ page.language }}/location">
+                                    {{ site.data.settings[page.language].menu_location }}
+                                </a>
+                            </li>
+                            <li id="menu-item-1509"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home active menu-item-1509">
+                                <a href="/{{ page.language }}/#contact">
+                                    {{ site.data.settings[page.language].menu_contact }}
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+</div>

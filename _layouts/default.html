@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>
+<html class="desktop ie7 no-js skin_light" lang="en-US"><![endif]-->
+<!--[if IE 8 ]>
+<html class="desktop ie8 no-js skin_light" lang="en-US"><![endif]-->
+<!--[if IE 9 ]>
+<html class="desktop ie9 no-js skin_light" lang="en-US"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js skin_light" lang="en-US"><!--<![endif]-->
+{% include head.html %}
+
+<body class="home page-template page-template-page_builder page-template-page_builder-php page page-id-15  pe-page-fullwidth pe-sticky-footer en">
+<div class="site-loader"></div>
+
+<div class="site-wrapper">
+    {% include nav.html %}
+
+    <div class="site-body">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+</div>
+
+{% include popup.html %}
+
+{% include footer-js.html %}
+
+</body>
+</html>
