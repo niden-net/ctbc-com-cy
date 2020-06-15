@@ -1,33 +1,7 @@
 name: ctbc.com.cy
 author: 'GRedneck'
-title: 'Just a Greek that became a Redneck (and proud of it), trying to live a sustainable life.'
-description: 'Just a Greek that became a Redneck (and proud of it), trying to live a sustainable life.'
-keywords: 'sustainable living, living, debt free, financial tips, prepping tips'
-tagline: G-Rednecks Unite!
 
-url: https://gredneck.com
-logo: /assets/img/gredneck-logo.png
-social:
-  name: GRedneck
-  links:
-    - https://t.me/g_redneck
-
-#twitter:
-#  username:
-#  card: summary
-#facebook:
-#  app_id: 1234
-#  publisher: 1234
-#  admins: 1234
-#webmaster_verifications:
-#  google: 1234
-#  bing: 1234
-#  alexa: 1234
-#  yandex: 1234
-#  baidu: 1234
-#lang: The locale these tags are marked up in. Of the format language_TERRITORY. Default is en_US.
-
-google_analytics: ''
+url: https://ctbc.com.cy
 
 # Conversion
 markdown: kramdown
@@ -53,7 +27,6 @@ plugins:
   - jekyll-seo-tag
 
 include:
-  - _pages
   - _redirects
 
 sass:
@@ -67,4 +40,4 @@ exclude:
   - LICENSE
   - README.md
   - serve
-  - boxfile.yml
+  - docker-compose.yml
