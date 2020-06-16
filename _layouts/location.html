@@ -1,0 +1,170 @@
+---
+layout: default
+menu_url: '/location'
+---
+
+<section class="pe-main-section pe-splash-section pe-full-page pe-no-resize"
+         id="section-splash"
+         data-maxheight="0"
+         data-minheight="300">
+    <div class="peCaption pe-caption-persistent"
+         data-orig-width="940"
+         data-orig-height="300">
+        <div class="peCaptionLayer"
+             data-origin="center"
+             data-transition="fadeIn"
+             data-duration="1"
+             data-delay="0"
+             data-x="0" data-y="-100">
+            <div class="wrapper">
+                <a href="#section-section2">
+                    <img src="/assets/img/logo_location.png"
+                         alt="">
+                    <span>
+                        LOCATION<i class="icon-down-open-mini"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="pe-block">
+        <div class="peSlider peVolo peNeedResize pe-block"
+             data-autopause="disabled"
+             data-speed="25"
+             data-fade="2"
+             data-transition="pz"
+             data-plugin="peVista"
+             data-controls-arrows="edges-full"
+             data-controls-bullets="disabled"
+             data-icon-font="enabled"
+             data-height="0,2.35,0">
+            <div class="peWrap">
+                <div data-delay="7"
+                     class="visible scale">
+                    <img alt=""
+                         width="1280"
+                         height="720"
+                         src="/assets/img/bglocation.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section
+        class="pe-main-section pe-view-layout-block pe-view-layout-block-2 pe-style-light"
+        id="section-section2"
+        style="padding: 60px 0px 60px 0px; background-color:#b1900a;background-color:rgba(177,144,10,1);">
+    <div class="pe-block pe-view-layout-block pe-view-layout-block-3 pe-container pe-view-layout-class-columns">
+        <div class="row-fluid pe-container">
+            <div class="span8">
+                <div class="pe-block pe-view-layout-block pe-view-layout-block-5 pe-container pe-view-layout-class-container">
+                    <div class="pe-block  pe-view-layout-block pe-view-layout-block-6">
+                        <div class="pe-container">
+                            <div style="text-align: right; line-height: 1.3;">
+                                <span class="CT13 CTspacingnormal CTwhite">
+                                    CT Business Center is located on the Limassol coastal front overlooking the sea and offers fully serviced and virtual offices complemented by a full range of industry-leading services and facilities and an on-site office support team
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="pe-block pe-view-layout-block pe-view-layout-block-7 pe-container pe-view-layout-class-container">
+                    <div class="pe-block  pe-view-layout-block pe-view-layout-block-8">
+                        <div class="pe-container">
+                            <p>
+                                <span class="ctshortcutbutton"
+                                      style=" display:inline-block; vertical-align:middle;">
+                                    <a class="contour-btn btncustom"
+                                       href="/{{ page.language }}/quick-contact">
+                                        QUICK CONTACT
+                                    </a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section
+        class="pe-main-section pe-view-layout-block pe-view-layout-block-9 pe-style-light"
+        id="section-section9"
+        style="padding: 30px 0px 5px 0px; background-color:#29353a;background-color:rgba(41,53,58,1);">
+    <h2>
+        LOCATION
+    </h2>
+    <div class="pe-block pe-block-fullwidth pe-view-layout-block pe-view-layout-block-10">
+        <div class="wpgmp_map_container wpgmp-map-1" rel="map1">
+            <div class="wpgmp_map " style="width:100%; height:500px;"
+                 id="map1"></div>
+        </div>
+        <script>jQuery(document).ready(function ($) {
+            var map1 = $("#map1").maps({
+                "map_options": {
+                    "center_lat": "34.676849",
+                    "center_lng": "33.048817",
+                    "zoom": 17,
+                    "map_type_id": "ROADMAP",
+                    "draggable": true,
+                    "scroll_wheel": false,
+                    "display_45_imagery": "",
+                    "marker_default_icon": "https:\/\/ctbc.com.cy\/wp-content\/uploads\/2018\/08\/arrow.png",
+                    "infowindow_setting": "",
+                    "infowindow_bounce_animation": "",
+                    "infowindow_drop_animation": false,
+                    "close_infowindow_on_map_click": false,
+                    "default_infowindow_open": false,
+                    "infowindow_open_event": "click",
+                    "full_screen_control": true,
+                    "search_control": true,
+                    "zoom_control": true,
+                    "map_type_control": true,
+                    "street_view_control": true,
+                    "full_screen_control_position": "TOP_RIGHT",
+                    "search_control_position": null,
+                    "zoom_control_position": "TOP_LEFT",
+                    "map_type_control_position": "TOP_RIGHT",
+                    "map_type_control_style": "HORIZONTAL_BAR",
+                    "street_view_control_position": "TOP_LEFT",
+                    "map_control": true,
+                    "map_control_settings": null,
+                    "width": "",
+                    "height": "500"
+                },
+                "places": [{
+                    "id": "1",
+                    "title": "CTBC",
+                    "address": "",
+                    "source": "manual",
+                    "content": "CTBC",
+                    "location": {
+                        "icon": "https:\/\/ctbc.com.cy\/wp-content\/uploads\/2018\/08\/arrow.png",
+                        "lat": "34.676849",
+                        "lng": "33.048817",
+                        "city": "",
+                        "state": "",
+                        "country": "",
+                        "onclick_action": "marker",
+                        "redirect_custom_link": "",
+                        "marker_image": null,
+                        "open_new_tab": "yes",
+                        "postal_code": "",
+                        "draggable": false,
+                        "infowindow_default_open": false,
+                        "animation": "BOUNCE",
+                        "infowindow_disable": true,
+                        "zoom": 5,
+                        "extra_fields": null
+                    },
+                    "categories": [],
+                    "custom_filters": null
+                }],
+                "street_view": null,
+                "map_property": {"map_id": "1"}
+            }).data("wpgmp_maps");
+        });</script>
+    </div>
+</section>
