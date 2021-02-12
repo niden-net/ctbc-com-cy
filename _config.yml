@@ -1,38 +1,8 @@
-name: ctbc.com.cy
-author: 'GRedneck'
-
-url: https://ctbc.com.cy
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-# Markdown Processing
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-  hard_wrap: false
-  auto_ids: true
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  syntax_highlighter_opts:
+    disable: true
 
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-
-include:
-  - _redirects
-
-sass:
-  style: :compressed # You might prefer to minify using :compressed
-
-# Exclude these files from your production _site
 exclude:
   - vendor
   - Gemfile
@@ -40,4 +10,6 @@ exclude:
   - LICENSE
   - README.md
   - serve
-  - docker-compose.yml
+
+
+
