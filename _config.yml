@@ -3,6 +3,9 @@ kramdown:
   syntax_highlighter_opts:
     disable: true
 
+include:
+  - _redirects
+
 exclude:
   - vendor
   - Gemfile
@@ -10,6 +13,4 @@ exclude:
   - LICENSE
   - README.md
   - serve
-
-
-
+  - ctbc
