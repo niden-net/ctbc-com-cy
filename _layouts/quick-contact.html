@@ -1,0 +1,191 @@
+---
+layout: default
+---
+        <section
+                class="pe-main-section pe-view-layout-block pe-view-layout-block-1 pe-style-light"
+                id="section-section1" style="padding: 60px 0 60px 0; ">
+            <h2>
+                <span style="color:#243841">
+                    {{ site.data[page.language].quick_contact }}
+                </span>
+            </h2>
+            <div class="pe-block pe-view-layout-block pe-view-layout-block-2 pe-container pe-view-layout-class-columns">
+                <div class="row-fluid pe-container">
+                    <div class="span6">
+                        <div class="pe-block pe-view-layout-block pe-view-layout-block-3 pe-container pe-view-layout-class-container">
+                            <div class="pe-block  pe-view-layout-block pe-view-layout-block-4">
+                                <div class="pe-container">
+                                    <p>
+                                        <span style="color:#243841; font-size:12px;">
+                                            {{ site.data[page.language].quick_contact_fill_fields }}
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="color:#243841; font-size:12px;">
+                                            <b>{{ site.data[page.language].name }}</b><br/>
+                                            {{ site.data[page.language].contact_address }}
+                                            <br/>
+                                            <br/>
+                                            {{ site.data[page.language].call_phone }}<br/>
+                                            {{ site.data[page.language].call_fax }}<br/>
+                                            <img class
+                                                 src="/assets/img/emailwhite.png">
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="pe-block pe-view-layout-block pe-view-layout-block-5 pe-container pe-view-layout-class-container">
+                            <div class="pe-block pe-block-fullwidth pe-view-layout-block pe-view-layout-block-7">
+                                <div role="form"
+                                     class="wpcf7"
+                                     id="wpcf7-f585-p509-o2"
+                                     lang="en-US"
+                                     dir="ltr">
+                                    <div class="screen-reader-response"></div>
+                                    <form action="quick-contact.html#wpcf7-f585-p509-o2"
+                                          method="post" class="wpcf7-form"
+                                          novalidate="novalidate">
+                                        <div style="display: none;">
+                                            <input type="hidden"
+                                                   name="_wpcf7_container_post"
+                                                   value="509"/>
+                                        </div>
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th style="width:30%; height:0;"></th>
+                                                <th style="width:30%; height:0;"></th>
+                                                <th style="width:40%; height:0;"></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>{{ site.data[page.language].contact_name }}*</td>
+                                                <td colspan="2">
+                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                        <input type="text"
+                                                               name="your-name"
+                                                               value
+                                                               size="40"
+                                                               class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                               aria-required="true"
+                                                               aria-invalid="false"/>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ site.data[page.language].quick_contact_email }}*</td>
+                                                <td colspan="2">
+                                                    <span class="wpcf7-form-control-wrap your-email">
+                                                        <input type="email"
+                                                               name="your-email"
+                                                               value
+                                                               size="40"
+                                                               class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                               aria-required="true"
+                                                               aria-invalid="false"/>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ site.data[page.language].quick_contact_phone }}</td>
+                                                <td>
+                                                    <span class="wpcf7-form-control-wrap phone1">
+                                                        <input type="tel"
+                                                               name="phone1"
+                                                               value size="40"
+                                                               maxlength="6"
+                                                               class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel emailfields"
+                                                               id="emailphone1"
+                                                               aria-invalid="false"/>
+                                                    </span>
+                                                    <span class="lightlabel">
+                                                        {{ site.data[page.language].quick_contact_country_code }}
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="wpcf7-form-control-wrap phone2">
+                                                        <input type="tel"
+                                                               name="phone2"
+                                                               value
+                                                               size="40"
+                                                               maxlength="24"
+                                                               class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel emailfield"
+                                                               id="emailphone2"
+                                                               aria-invalid="false"/>
+                                                    </span>
+                                                    <span class="lightlabel">
+                                                        {{ site.data[page.language].quick_contact_phone_number }}
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ site.data[page.language].contact_query }}</td>
+                                                <td colspan="2">
+                                                    <span class="wpcf7-form-control-wrap your-message">
+                                                        <textarea name="your-message"
+                                                                  cols="40"
+                                                                  rows="10"
+                                                                  class="wpcf7-form-control wpcf7-textarea"
+                                                                  aria-invalid="false"></textarea>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ site.data[page.language].quick_contact_preferred_contact }}</td>
+                                                <td colspan="2">
+                                                    <span class="wpcf7-form-control-wrap contactpreference">
+                                                        <span class="wpcf7-form-control wpcf7-radio emailradio"
+                                                              id="emailpreference">
+                                                            <span class="wpcf7-list-item first">
+                                                                <label>
+                                                                    <input type="radio"
+                                                                           name="contactpreference"
+                                                                           value="{{ site.data[page.language].quick_contact_email }}"/>
+                                                                    <span class="wpcf7-list-item-label">
+                                                                        {{ site.data[page.language].quick_contact_email }}
+                                                                    </span>
+                                                                </label>
+                                                            </span>
+                                                            <span class="wpcf7-list-item last">
+                                                                <label>
+                                                                    <input type="radio"
+                                                                           name="contactpreference"
+                                                                           value="{{ site.data[page.language].quick_contact_phone }}"/>
+                                                                    <span class="wpcf7-list-item-label">
+                                                                        {{ site.data[page.language].quick_contact_phone }}
+                                                                    </span>
+                                                                </label>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td colspan="2">
+                                                    *{{ site.data[page.language].contact_fields_required }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td colspan="2">
+                                                    <input type="submit"
+                                                           value="{{ site.data[page.language].contact_send_query }}"
+                                                           class="wpcf7-form-control wpcf7-submit"/>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
