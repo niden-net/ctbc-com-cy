@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- for xml compliance -->
+<krpano version="1.0.8.14">
+    <action name="playpanosounds">
+		playbackgroundsound(none);
+	</action>
+    <action name="stoppanosounds">
+		stopbackgroundsound();
+	</action>
+    <action name="closepanoobjects">
+	</action>
+    <!--************** Panorama *******************************************************************-->
+    <!-- @File="index2.xml" @PanoName="Office" @FilePath="C:/Users/Polys/Desktop/Dinos/Panos/Office/office_sphere.tif" -->
+    <panoview h="2.47" v="0" fov="90"/>
+    <!-- view parameters -->
+    <view fisheye="0" limitview="range" hlookatmin="-180" hlookatmax="180" vlookatmin="-90" vlookatmax="90" fovmin="1" fovmax="90" fov="90" hlookat="2.47" vlookat="0"/>
+    <autorotate horizon="0" tofov="90" waittime="1" speed="5"/>
+    <!-- preview image -->
+    <preview url="indexdata/index2/preview.jpg" type="CUBESTRIP" striporder="FRBLUD" details="16"/>
+    <!-- the pano itself -->
+    <image type="CUBE" multires="true" tilesize="536" baseindex="0">
+        <level tiledimagewidth="4287" tiledimageheight="4287">
+            <left url="indexdata/index2/3/3/%v_%u.jpg"/>
+            <front url="indexdata/index2/0/3/%v_%u.jpg"/>
+            <right url="indexdata/index2/1/3/%v_%u.jpg"/>
+            <back url="indexdata/index2/2/3/%v_%u.jpg"/>
+            <up url="indexdata/index2/4/3/%v_%u.jpg"/>
+            <down url="indexdata/index2/5/3/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="2143" tiledimageheight="2143">
+            <left url="indexdata/index2/3/2/%v_%u.jpg"/>
+            <front url="indexdata/index2/0/2/%v_%u.jpg"/>
+            <right url="indexdata/index2/1/2/%v_%u.jpg"/>
+            <back url="indexdata/index2/2/2/%v_%u.jpg"/>
+            <up url="indexdata/index2/4/2/%v_%u.jpg"/>
+            <down url="indexdata/index2/5/2/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="1071" tiledimageheight="1071">
+            <left url="indexdata/index2/3/1/%v_%u.jpg"/>
+            <front url="indexdata/index2/0/1/%v_%u.jpg"/>
+            <right url="indexdata/index2/1/1/%v_%u.jpg"/>
+            <back url="indexdata/index2/2/1/%v_%u.jpg"/>
+            <up url="indexdata/index2/4/1/%v_%u.jpg"/>
+            <down url="indexdata/index2/5/1/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="535" tiledimageheight="535">
+            <left url="indexdata/index2/3/0/%v_%u.jpg"/>
+            <front url="indexdata/index2/0/0/%v_%u.jpg"/>
+            <right url="indexdata/index2/1/0/%v_%u.jpg"/>
+            <back url="indexdata/index2/2/0/%v_%u.jpg"/>
+            <up url="indexdata/index2/4/0/%v_%u.jpg"/>
+            <down url="indexdata/index2/5/0/%v_%u.jpg"/>
+        </level>
+        <!-- mobile phone / iphone images -->
+        <mobile>
+            <left url="indexdata/index2/3/mobile_face.jpg"/>
+            <front url="indexdata/index2/0/mobile_face.jpg"/>
+            <right url="indexdata/index2/1/mobile_face.jpg"/>
+            <back url="indexdata/index2/2/mobile_face.jpg"/>
+            <up url="indexdata/index2/4/mobile_face.jpg"/>
+            <down url="indexdata/index2/5/mobile_face.jpg"/>
+        </mobile>
+        <!-- tablet pc / ipad images -->
+        <tablet>
+            <left url="indexdata/index2/3/tablet_face.jpg"/>
+            <front url="indexdata/index2/0/tablet_face.jpg"/>
+            <right url="indexdata/index2/1/tablet_face.jpg"/>
+            <back url="indexdata/index2/2/tablet_face.jpg"/>
+            <up url="indexdata/index2/4/tablet_face.jpg"/>
+            <down url="indexdata/index2/5/tablet_face.jpg"/>
+        </tablet>
+    </image>
+    <!--************** Hotspots and lensflares ****************************************************-->
+    <hotspot name="spot4" onclick="mainloadpano(index0.xml);" url="indexdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot4,0.1);" onhover="showtext(Back to Entrance);" ath="-117.408" atv="-0.759494"/>
+    <action name="hidepanospotsaction">
+		set(hotspot[spot4].visible, false);
+	</action>
+    <action name="showpanospotsaction">
+		set(hotspot[spot4].visible, true);
+	</action>
+    <!-- close all hotspots -->
+</krpano>

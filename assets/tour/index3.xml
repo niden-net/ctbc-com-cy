@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- for xml compliance -->
+<krpano version="1.0.8.14">
+    <action name="playpanosounds">
+		playbackgroundsound(none);
+	</action>
+    <action name="stoppanosounds">
+		stopbackgroundsound();
+	</action>
+    <action name="closepanoobjects">
+	</action>
+    <!--************** Panorama *******************************************************************-->
+    <!-- @File="index3.xml" @PanoName="Stairs" @FilePath="C:/Users/Polys/Desktop/Dinos/Panos/Stairs/Stairs_sphere.tif" -->
+    <panoview h="0" v="0" fov="90"/>
+    <!-- view parameters -->
+    <view fisheye="0" limitview="range" hlookatmin="-180" hlookatmax="180" vlookatmin="-90" vlookatmax="90" fovmin="1" fovmax="90" fov="90" hlookat="0" vlookat="0"/>
+    <autorotate horizon="0" tofov="90" waittime="1" speed="5"/>
+    <!-- preview image -->
+    <preview url="indexdata/index3/preview.jpg" type="CUBESTRIP" striporder="FRBLUD" details="16"/>
+    <!-- the pano itself -->
+    <image type="CUBE" multires="true" tilesize="539" baseindex="0">
+        <level tiledimagewidth="4312" tiledimageheight="4312">
+            <left url="indexdata/index3/3/3/%v_%u.jpg"/>
+            <front url="indexdata/index3/0/3/%v_%u.jpg"/>
+            <right url="indexdata/index3/1/3/%v_%u.jpg"/>
+            <back url="indexdata/index3/2/3/%v_%u.jpg"/>
+            <up url="indexdata/index3/4/3/%v_%u.jpg"/>
+            <down url="indexdata/index3/5/3/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="2156" tiledimageheight="2156">
+            <left url="indexdata/index3/3/2/%v_%u.jpg"/>
+            <front url="indexdata/index3/0/2/%v_%u.jpg"/>
+            <right url="indexdata/index3/1/2/%v_%u.jpg"/>
+            <back url="indexdata/index3/2/2/%v_%u.jpg"/>
+            <up url="indexdata/index3/4/2/%v_%u.jpg"/>
+            <down url="indexdata/index3/5/2/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="1078" tiledimageheight="1078">
+            <left url="indexdata/index3/3/1/%v_%u.jpg"/>
+            <front url="indexdata/index3/0/1/%v_%u.jpg"/>
+            <right url="indexdata/index3/1/1/%v_%u.jpg"/>
+            <back url="indexdata/index3/2/1/%v_%u.jpg"/>
+            <up url="indexdata/index3/4/1/%v_%u.jpg"/>
+            <down url="indexdata/index3/5/1/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="539" tiledimageheight="539">
+            <left url="indexdata/index3/3/0/%v_%u.jpg"/>
+            <front url="indexdata/index3/0/0/%v_%u.jpg"/>
+            <right url="indexdata/index3/1/0/%v_%u.jpg"/>
+            <back url="indexdata/index3/2/0/%v_%u.jpg"/>
+            <up url="indexdata/index3/4/0/%v_%u.jpg"/>
+            <down url="indexdata/index3/5/0/%v_%u.jpg"/>
+        </level>
+        <!-- mobile phone / iphone images -->
+        <mobile>
+            <left url="indexdata/index3/3/mobile_face.jpg"/>
+            <front url="indexdata/index3/0/mobile_face.jpg"/>
+            <right url="indexdata/index3/1/mobile_face.jpg"/>
+            <back url="indexdata/index3/2/mobile_face.jpg"/>
+            <up url="indexdata/index3/4/mobile_face.jpg"/>
+            <down url="indexdata/index3/5/mobile_face.jpg"/>
+        </mobile>
+        <!-- tablet pc / ipad images -->
+        <tablet>
+            <left url="indexdata/index3/3/tablet_face.jpg"/>
+            <front url="indexdata/index3/0/tablet_face.jpg"/>
+            <right url="indexdata/index3/1/tablet_face.jpg"/>
+            <back url="indexdata/index3/2/tablet_face.jpg"/>
+            <up url="indexdata/index3/4/tablet_face.jpg"/>
+            <down url="indexdata/index3/5/tablet_face.jpg"/>
+        </tablet>
+    </image>
+    <!--************** Hotspots and lensflares ****************************************************-->
+    <hotspot name="spot5" onclick="mainloadpano(index0.xml);" url="indexdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot5,0.1);" onhover="showtext(Back to Entrance);" ath="1.54374" atv="3.40206"/>
+    <hotspot name="spot6" onclick="mainloadpano(index1.xml);" url="indexdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot6,0.1);" onhover="showtext(Conference Room);" ath="-134.923" atv="1.54639"/>
+    <hotspot name="spot7" onclick="mainloadpano(index2.xml);" url="indexdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot7,0.1);" onhover="showtext(Office);" ath="20.0686" atv="2.78351"/>
+    <action name="hidepanospotsaction">
+		set(hotspot[spot5].visible, false);
+		set(hotspot[spot6].visible, false);
+		set(hotspot[spot7].visible, false);
+	</action>
+    <action name="showpanospotsaction">
+		set(hotspot[spot5].visible, true);
+		set(hotspot[spot6].visible, true);
+		set(hotspot[spot7].visible, true);
+	</action>
+    <!-- close all hotspots -->
+</krpano>
