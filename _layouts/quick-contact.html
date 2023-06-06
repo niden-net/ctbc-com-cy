@@ -45,13 +45,17 @@ layout: default
                                      lang="en-US"
                                      dir="ltr">
                                     <div class="screen-reader-response"></div>
-                                    <form action="quick-contact.html#wpcf7-f585-p509-o2"
-                                          method="post" class="wpcf7-form"
+                                    <form method="post"
+                                          class="wpcf7-form"
+                                          data-netlify="true"
+                                          netlify-honeypot="bot-field"
+                                          data-netlify-recaptcha="true"
                                           novalidate="novalidate">
                                         <div style="display: none;">
-                                            <input type="hidden"
-                                                   name="_wpcf7_container_post"
-                                                   value="509"/>
+                                            <label>
+                                                Don't fill this out if you’re human:
+                                                <input name="bot-field" />
+                                            </label>
                                         </div>
                                         <table>
                                             <thead>
@@ -175,11 +179,14 @@ layout: default
                                                 <td colspan="2">
                                                     <input type="submit"
                                                            value="{{ site.data[page.language].contact_send_query }}"
-                                                           class="wpcf7-form-control wpcf7-submit"/>
+                                                           class="wpcf7-form-control wpcf7-submit"
+                                                           onclick="handleSubmit()"
+                                                    />
                                                 </td>
                                             </tr>
                                             </tbody>
                                         </table>
+                                        <div data-netlify-recaptcha="true"></div>
                                         <div class="wpcf7-response-output wpcf7-display-none"></div>
                                     </form>
                                 </div>
@@ -189,3 +196,24 @@ layout: default
                 </div>
             </div>
         </section>
+
+<script type="application/javascript">
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => alert("Thank you for your query. We will get back to you shortly."))
+            .catch((error) => alert(error));
+    };
+
+    document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
+</script>
