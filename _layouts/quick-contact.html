@@ -193,7 +193,7 @@ layout: default
                                             </tr>
                                             </tbody>
                                         </table>
-                                        <div id="wpcf7-response-output" class="wpcf7-response-output"></div>
+                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
                                     </form>
                                 </div>
                             </div>
@@ -217,8 +217,7 @@ layout: default
 
         fetch("/en/", payload)
             .then(() => function () {
-                // alert("Thank you for your query. We will get back to you shortly.");
-                document.getElementById("wpcf7-response-output").innerHTML = "Thank you for your query. We will get back to you shortly.";
+                alert("Thank you for your query. We will get back to you shortly.");
                 myForm.reset();
             })
             .catch((error) => alert(error));
