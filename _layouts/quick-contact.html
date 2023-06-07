@@ -51,6 +51,7 @@ layout: default
                                           data-netlify="true"
                                           netlify-honeypot="bot-field"
                                           data-netlify-recaptcha="true"
+                                          onclick="handleSubmit(this)"
                                           novalidate="novalidate">
                                         <div style="display: none;">
                                             <label>
@@ -181,7 +182,6 @@ layout: default
                                                     <input type="submit"
                                                            value="{{ site.data[page.language].contact_send_query }}"
                                                            class="wpcf7-form-control wpcf7-submit"
-                                                           onclick="handleSubmit(this)"
                                                     />
                                                 </td>
                                             </tr>
@@ -220,8 +220,8 @@ layout: default
         )
             .then(
                 () => function () {
-                    alert("Thank you for your query. We will get back to you shortly.");
                     window.reload();
+                    alert("Thank you for your query. We will get back to you shortly.");
                 }
             )
             .catch((error) => alert(error));
