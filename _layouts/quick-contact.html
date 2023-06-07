@@ -215,7 +215,7 @@ layout: default
             body: new URLSearchParams(formData).toString(),
         };
 
-        fetch("/", payload)
+        fetch("/en/", payload)
             .then(() => console.log(payload))
             // .then(() => alert("Thank you for your query. We will get back to you shortly."))
             .catch((error) => alert(error));
@@ -224,4 +224,4 @@ layout: default
     document
         .querySelector("form")
         .addEventListener("submit", handleSubmit);
-</script>-->
+</script>
