@@ -236,26 +236,19 @@ layout: default
                                      lang="en-US"
                                      dir="ltr">
                                     <div class="screen-reader-response"></div>
-                                    <form action="index.html#wpcf7-f927-p15-o2"
+                                    <form
+                                    <form name="index-contact"
                                           method="post"
                                           class="wpcf7-form"
+                                          data-netlify="true"
+                                          netlify-honeypot="bot-field"
+                                          data-netlify-recaptcha="true"
                                           novalidate="novalidate">
                                         <div style="display: none;">
-                                            <input type="hidden"
-                                                   name="_wpcf7"
-                                                   value="927"/>
-                                            <input type="hidden"
-                                                   name="_wpcf7_version"
-                                                   value="5.0.3"/>
-                                            <input type="hidden"
-                                                   name="_wpcf7_locale"
-                                                   value="en_US"/>
-                                            <input type="hidden"
-                                                   name="_wpcf7_unit_tag"
-                                                   value="wpcf7-f927-p15-o2"/>
-                                            <input type="hidden"
-                                                   name="_wpcf7_container_post"
-                                                   value="15"/>
+                                            <label>
+                                                Don't fill this out if you’re human:
+                                                <input name="bot-field" />
+                                            </label>
                                         </div>
                                         <div class="cflabel">
                                             {{ site.data[page.language].contact_name }}*
@@ -330,6 +323,9 @@ layout: default
                                             <input type="submit"
                                                    value="{{ site.data[page.language].contact_send_query }}"
                                                    class="wpcf7-form-control wpcf7-submit"/>
+                                        </div>
+                                        <div class="cfbtn">
+                                            <div data-netlify-recaptcha="true"></div>
                                         </div>
                                         <div class="wpcf7-response-output wpcf7-display-none"></div>
                                     </form>
