@@ -203,30 +203,23 @@ layout: default
             </div>
         </section>
 
-<!--<script type="application/javascript">-->
-<!--    document-->
-<!--        .getElementById('quick-contact-form')-->
-<!--        .addEventListener(-->
-<!--            "submit",-->
-<!--            (event) => {-->
-<!--                event.preventDefault();-->
+<script type="application/javascript">
+    const handleSubmit = (event) => {
+        event.preventDefault();
 
-<!--                const myForm = event.target;-->
-<!--                const formData = new FormData(myForm);-->
+        const myForm = event.target;
+        const formData = new FormData(myForm);
 
-<!--                fetch("/", {-->
-<!--                    method: "POST",-->
-<!--                    headers: { "Content-Type": "application/x-www-form-urlencoded" },-->
-<!--                    body: new URLSearchParams(formData).toString(),-->
-<!--                })-->
-<!--                    .then(-->
-<!--                        () => function () {-->
-<!--                            window.reload();-->
-<!--                            alert("Thank you for your query. We will get back to you shortly.");-->
-<!--                        }-->
-<!--                    )-->
-<!--                    .catch((error) => alert(error));-->
-<!--            }-->
-<!--        );-->
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => alert("Thank you for your query. We will get back to you shortly."))
+            .catch((error) => alert(error));
+    };
 
-<!--</script>-->
+    document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
+</script>-->
